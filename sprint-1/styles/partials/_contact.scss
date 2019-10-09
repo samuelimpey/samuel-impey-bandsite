@@ -1,0 +1,21 @@
+.contact {
+    background-color: $black;
+    color: $white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 24px 3%;
+    &__title {
+       font-family: AvenirBold;
+       margin-bottom: 20px;
+    }
+    &__heading {
+        font-family: AvenirSemi;
+    }
+    &__info {
+        font-family: AvenirLight;
+    }
+    &__icons {
+        margin-right: 16.875%;
+    }
+}

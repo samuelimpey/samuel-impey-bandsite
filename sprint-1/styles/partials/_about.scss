@@ -1,0 +1,27 @@
+.about {
+    font-family: AvenirSemi;
+    margin-left: 5%;
+    margin-right: 5%;
+    &__title {
+        font-family: AvenirBold;
+        margin-top: 32px;
+    }
+    &__img {
+        box-sizing: border-box;
+        margin: 6.67% 5%;
+    }
+    &__quote {
+        margin: 24px 5% 32px 5%;
+    }
+    &__name {
+        margin-left: 5%;
+        margin-bottom: 40px;
+    }
+    &__sub-title {
+        margin-bottom: 24px;
+    }
+    &__info {
+        font-family: AvenirLight;
+        margin-bottom: 40px;
+    }
+}

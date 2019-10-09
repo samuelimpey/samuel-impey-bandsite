@@ -1,0 +1,14 @@
+.gallery {
+    margin: 32px 5% 24px 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &__title {
+        font-family: AvenirBold;
+        margin-bottom: 24px;
+    }
+    &__images {
+        margin-bottom: 16px;
+        width: 100%;
+    }
+}

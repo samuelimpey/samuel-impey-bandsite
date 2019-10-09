@@ -1,0 +1,22 @@
+.hero {
+    padding-top: 80px;
+    height: 263px;
+    &__image {
+        height: 183px;
+    }
+    &__text {
+        box-sizing: border-box;
+        width: 65%;
+        position: relative;
+        font-family: AvenirBold;
+        color: $white;
+        bottom: 120px;
+        left: 5%;
+    }
+}
+
+// @include medium {
+//     .hero {
+
+//     }
+// }

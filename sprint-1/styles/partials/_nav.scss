@@ -1,0 +1,35 @@
+.header {
+    position: fixed;
+    z-index: 1;
+    background-color: $black;
+    width: 100vw;
+    height: 80px;
+
+    &__selectors {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    list-style: none;
+        &--style {
+            color: $white;
+            text-decoration: none;
+            font-family: AvenirSemi;
+        }
+        &--logo {
+            margin: 16px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+}
+
+@include medium {
+    .header__selectors--logo {
+       display: unset;     
+    }
+}
