@@ -8,13 +8,13 @@
     }
     &__img {
         box-sizing: border-box;
-        margin: 6.67% 5%;
+        width: 100%;
+        margin: 24px 0; 
     }
     &__quote {
-        margin: 24px 5% 32px 5%;
+        margin: 24px 0 32px 0;
     }
     &__name {
-        margin-left: 5%;
         margin-bottom: 40px;
     }
     &__sub-title {
@@ -24,4 +24,24 @@
         font-family: AvenirLight;
         margin-bottom: 40px;
     }
+}
+
+@include medium {
+    .about__info--sbs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .about__info {
+        width: 48.33%;
+    }
+    .about{
+        margin-left: 3.125%;
+        margin-right: 3.125%;
+    }
+    .about__img {
+         margin: 0;
+        height: 362px;
+        object-fit: cover;
+     }
 }

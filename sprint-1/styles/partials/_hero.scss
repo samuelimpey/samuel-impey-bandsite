@@ -2,7 +2,7 @@
     padding-top: 80px;
     height: 263px;
     &__image {
-        height: 183px;
+        height: 100%;
     }
     &__text {
         box-sizing: border-box;
@@ -15,8 +15,8 @@
     }
 }
 
-// @include medium {
-//     .hero {
-
-//     }
-// }
+@include medium {
+    .hero {
+        height: 480px;
+    }
+}

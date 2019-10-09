@@ -29,6 +29,9 @@
 }
 
 @include medium {
+    .header {
+        display: flex;
+    }
     .header__selectors--logo {
        display: unset;     
     }
