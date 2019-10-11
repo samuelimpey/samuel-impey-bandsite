@@ -40,8 +40,17 @@
         margin-right: 3.125%;
     }
     .about__img {
-         margin: 0;
+        margin: 0;
         height: 362px;
         object-fit: cover;
      }
+}
+
+@include huge {
+    .about {
+        margin: 0 18.889%;
+    }
+    .about__img {
+        height: 50vh;
+    }
 }

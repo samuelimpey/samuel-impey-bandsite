@@ -19,3 +19,17 @@
         margin-right: 16.875%;
     }
 }
+
+@include medium {
+    .contact__container--one {
+        display: block;
+    }
+    .contact__container--two {
+        display: flex;
+        flex-wrap: wrap;
+        // justify-content: space-around;
+    }
+    .contact__container--three {
+        margin-right: 3.125%;
+    }
+}

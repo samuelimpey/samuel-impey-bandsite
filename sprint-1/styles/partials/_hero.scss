@@ -1,13 +1,20 @@
 .hero {
+    min-height: 343px;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     padding-top: 80px;
-    height: 263px;
+  
     &__image {
         height: 100%;
+        width: 100%;
     }
     &__text {
         box-sizing: border-box;
-        width: 65%;
-        position: relative;
+        width: 70%;
+        top: 50%;
+        position: absolute;
         font-family: AvenirBold;
         color: $white;
         bottom: 120px;
@@ -17,6 +24,19 @@
 
 @include medium {
     .hero {
-        height: 480px;
+        min-height: 560px;
     }
+    .hero__text {
+        font-size: 60px;
+        line-height: 68px;
+        bottom: 300px;
+    }
+}
+@include huge {
+    .hero {
+        min-height: 750px;
+    }
+    // .hero__image {
+    //     height: 83.333vh;
+    // }
 }

@@ -6,21 +6,26 @@
     height: 80px;
 
     &__selectors {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end;
     list-style: none;
+        &--active{
+            border-bottom: 3px $white solid;
+        }
         &--style {
             color: $white;
             text-decoration: none;
-            font-family: AvenirSemi;
+            font-family: AvenirMedium;
+            text-align: center;
+            width: 50%;
+            font-size: 14px;
+            padding-bottom: 5px;
         }
+
         &--logo {
-            margin: 16px;
+            margin: 14px 0 16px 0;
             display: flex;
             justify-content: center;
         }
@@ -32,7 +37,27 @@
     .header {
         display: flex;
     }
+    // .header__selectors--logo {
+    //    display: unset;     
+    // }
+    .header__selectors {
+        width: 35%;
+        font-size: 16px;
+    }
+    .header__selectors--style {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 24px;
+    }
+}
+
+@include huge {
     .header__selectors--logo {
-       display: unset;     
+        margin-left: 12.5%;
+        margin-right: 3.889%;
+    }
+    .header__selectors {
+        width: 15%;
     }
 }

@@ -27,3 +27,13 @@
         // display: block;
     }
 }
+
+@include huge {
+    .gallery__images {
+        width: 23.889%;
+        height: 13.4%;
+    }
+    .gallery__title {
+        margin-left: 12.5%;
+    }
+}
