@@ -2,7 +2,7 @@
     background-color: $black;
     color: $white;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     padding: 24px 3%;
     &__title {
@@ -18,6 +18,14 @@
     &__icons {
         margin-right: 16.875%;
     }
+    &__logo {
+        display: none;
+    }
+    // &__container {
+    //     &--one {
+    //         display: block;
+    //     }
+    // }
 }
 
 @include medium {
@@ -32,6 +40,7 @@
     }
     .contact__container--one {
         display: block;
+        position: relative;
     }
     .contact__container--two {
         display: flex;
@@ -42,7 +51,20 @@
         margin-right: 3.125%;
     }
     .contact__logo {
-        position: relative;
-        left: 25%;
+        display: unset;
+        position: absolute;
+        left: 83%;
+    }
+}
+
+@include huge {
+    .contact {
+        padding: 3.333% 12.5% 0 12.5%;
+    }
+    .contact__container--two {
+        width: 65%;
+    }
+    .contact__logo {
+        left: 89.3%;
     }
 }

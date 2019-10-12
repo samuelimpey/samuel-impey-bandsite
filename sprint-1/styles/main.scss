@@ -1,11 +1,7 @@
 @import './partials/fonts';
 @import './partials/colors';
 @import './partials/breakpoints';
-@import './partials/nav';
-@import './partials/hero';
-@import './partials/about';
-@import './partials/gallery';
-@import './partials/contact';
+
 
 html, body {
     margin: 0;
@@ -57,5 +53,12 @@ h5 {
     h5 {
     font-size: 12px;
     line-height: 20px;
+    margin: 0;
     }
 }
+
+@import './partials/nav';
+@import './partials/hero';
+@import './partials/about';
+@import './partials/gallery';
+@import './partials/contact';
