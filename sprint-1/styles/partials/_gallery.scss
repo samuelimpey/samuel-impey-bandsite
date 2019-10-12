@@ -1,16 +1,21 @@
 .gallery {
-    margin: 32px 0 24px 0;
+    padding: 32px 0 24px 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     &__title {
         font-family: AvenirBold;
-        margin: 0 0 24px 5%;
+        padding: 16px 0 0 5%;
+        margin: 0;
     }
     &__images {
         margin: 8px 16px;
         width: 90%;
+    }
+    &__background {
+        background-color: $alabaster;
     }
 }
 
@@ -18,22 +23,30 @@
     .gallery__images {
         // box-sizing: content-box;
         width: 29%;
-        justify-content: space-evenly;
+        justify-content: space-between;
         margin: 12px 1.563%;
-        height: 126px;
+        height: 16.401%;
     }
     .gallery__title {
-        margin-left:3.125%;
+        padding:24px 3.125%;
         // display: block;
     }
 }
 
 @include huge {
+    .gallery__background {
+        // background-color: $alabaster;
+    }
+    .gallery {
+        padding: 0 0 40px 0;
+    }
     .gallery__images {
         width: 23.889%;
         height: 13.4%;
+        margin: 12px;
     }
     .gallery__title {
-        margin-left: 12.5%;
+        margin: 0;
+        padding: 48px 0 64px 12.5%;
     }
 }

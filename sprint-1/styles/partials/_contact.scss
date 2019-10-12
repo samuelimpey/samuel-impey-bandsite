@@ -21,15 +21,28 @@
 }
 
 @include medium {
+    .contact {
+        display: block;
+    }
+    .contact__title {
+        display: inline-block;
+    }
+    .contact__icons {
+        margin: 0 0 0 5%;
+    }
     .contact__container--one {
         display: block;
     }
     .contact__container--two {
         display: flex;
         flex-wrap: wrap;
-        // justify-content: space-around;
+        justify-content: space-between;
     }
     .contact__container--three {
         margin-right: 3.125%;
+    }
+    .contact__logo {
+        position: relative;
+        left: 25%;
     }
 }

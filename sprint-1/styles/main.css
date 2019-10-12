@@ -191,7 +191,7 @@
     margin-right: 3.889%;
   }
   .header__selectors {
-    width: 15%;
+    width: 11.11%;
   }
 }
 
@@ -228,6 +228,7 @@
 
 @media only screen and (min-width: 768px) {
   .hero {
+    height: 52.08vw;
     min-height: 560px;
   }
   .hero__text {
@@ -239,6 +240,7 @@
 
 @media only screen and (min-width: 1440px) {
   .hero {
+    height: 46.52vw;
     min-height: 750px;
   }
 }
@@ -300,7 +302,7 @@
   }
   .about__img {
     margin: 0;
-    height: 362px;
+    height: 47.1vw;
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -311,12 +313,12 @@
     margin: 0 18.889%;
   }
   .about__img {
-    height: 50vh;
+    height: 31.25vw;
   }
 }
 
 .gallery {
-  margin: 32px 0 24px 0;
+  padding: 32px 0 24px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -329,11 +331,15 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .gallery__title {
   font-family: AvenirBold;
-  margin: 0 0 24px 5%;
+  padding: 16px 0 0 5%;
+  margin: 0;
 }
 
 .gallery__images {
@@ -341,27 +347,36 @@
   width: 90%;
 }
 
+.gallery__background {
+  background-color: #fafafa;
+}
+
 @media only screen and (min-width: 768px) {
   .gallery__images {
     width: 29%;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin: 12px 1.563%;
-    height: 126px;
+    height: 16.401%;
   }
   .gallery__title {
-    margin-left: 3.125%;
+    padding: 24px 3.125%;
   }
 }
 
 @media only screen and (min-width: 1440px) {
+  .gallery {
+    padding: 0 0 40px 0;
+  }
   .gallery__images {
     width: 23.889%;
     height: 13.4%;
+    margin: 12px;
   }
   .gallery__title {
-    margin-left: 12.5%;
+    margin: 0;
+    padding: 48px 0 64px 12.5%;
   }
 }
 
@@ -398,6 +413,15 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .contact {
+    display: block;
+  }
+  .contact__title {
+    display: inline-block;
+  }
+  .contact__icons {
+    margin: 0 0 0 5%;
+  }
   .contact__container--one {
     display: block;
   }
@@ -407,9 +431,16 @@
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .contact__container--three {
     margin-right: 3.125%;
+  }
+  .contact__logo {
+    position: relative;
+    left: 25%;
   }
 }
 
