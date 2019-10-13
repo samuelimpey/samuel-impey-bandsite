@@ -26,7 +26,6 @@
 
 @include medium {
     .gallery__images {
-        // box-sizing: content-box;
         width: 29%;
         justify-content: space-between;
         margin: 12px 1.563%;
@@ -34,14 +33,10 @@
     }
     .gallery__title {
         padding:24px 3.125% 0 3.125%;
-        // display: block;
     }
 }
 
 @include huge {
-    // .gallery__background {
-    //     // background-color: $alabaster;
-    // }
     .gallery {
         padding: 0 0 40px 0;
     }
