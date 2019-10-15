@@ -1,0 +1,65 @@
+.contact {
+    background-color: $black;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 24px 3%;
+    &__title {
+       font-family: AvenirBold;
+       margin-bottom: 20px;
+    }
+    &__heading {
+        font-family: AvenirSemi;
+    }
+    &__info {
+        font-family: AvenirLight;
+    }
+    &__icons {
+        margin-right: 16.875%;
+    }
+    &__logo {
+        display: none;
+    }
+}
+
+@include medium {
+    .contact {
+        display: block;
+    }
+    .contact__title {
+        display: inline-block;
+    }
+    .contact__icons {
+        margin: 0 0 0 5%;
+    }
+    .contact__container--one {
+        display: block;
+        position: relative;
+    }
+    .contact__container--two {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .contact__container--three {
+        margin-right: 3.125%;
+    }
+    .contact__logo {
+        display: unset;
+        position: absolute;
+        left: 83%;
+    }
+}
+
+@include huge {
+    .contact {
+        padding: 3.333% 12.5% 0 12.5%;
+    }
+    .contact__container--two {
+        width: 65%;
+    }
+    .contact__logo {
+        left: 89.3%;
+    }
+}

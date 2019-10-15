@@ -1,0 +1,64 @@
+@import './partials/fonts';
+@import './partials/colors';
+@import './partials/breakpoints';
+
+
+html, body {
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    color: $black;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+h1 {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+h4 {
+    font-size: 13px;
+    line-height: 18px;
+}
+h5 {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+@include medium {
+    h1 {
+    font-size: 36px;
+    line-height: 44px;
+    margin: 0;
+    }
+
+    h2 {
+    font-size: 24px;
+    line-height: 32px;
+    }
+
+    h4 {
+    font-size: 13px;
+    line-height: 18px;
+    }
+    h5 {
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0;
+    }
+}
+
+@import './partials/nav';
+@import './partials/hero';
+@import './partials/about';
+@import './partials/gallery';
+@import './partials/contact';

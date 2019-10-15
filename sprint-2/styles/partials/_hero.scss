@@ -1,0 +1,41 @@
+.hero {
+    min-height: 343px;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+  
+    &__image {
+        height: 100%;
+        width: 100%;
+    }
+    &__text {
+        box-sizing: border-box;
+        width: 70%;
+        top: 50%;
+        position: absolute;
+        font-family: AvenirBold;
+        color: $white;
+        bottom: 120px;
+        left: 5%;
+    }
+}
+
+@include medium {
+    .hero {
+        height: 52.08vw;
+        // min-height: 480px;
+    }
+    .hero__text {
+        font-size: 60px;
+        line-height: 68px;
+        bottom: 300px;
+    }
+}
+@include huge {
+    .hero {
+        height: 46.52vw;
+        min-height: 750px;
+    }
+}

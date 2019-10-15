@@ -1,0 +1,52 @@
+.gallery {
+    padding: 32px 0 24px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    &__title {
+        font-family: AvenirBold;
+        padding: 16px 0 0 5%;
+        margin: 0;
+    }
+    &__images {
+        margin: 8px 16px;
+        width: 90%;
+        filter: grayscale(100%);
+    }
+    &__background {
+        background-color: $alabaster;
+    }
+    img:hover {
+        filter: grayscale(0);
+        transition-duration: 1s;
+    }
+}
+
+@include medium {
+    .gallery__images {
+        width: 29%;
+        justify-content: space-between;
+        margin: 12px 1.563%;
+        height: 16.401%;
+    }
+    .gallery__title {
+        padding:24px 3.125% 0 3.125%;
+    }
+}
+
+@include huge {
+    .gallery {
+        padding: 0 0 40px 0;
+    }
+    .gallery__images {
+        width: 23.889%;
+        height: 13.4%;
+        margin: 12px;
+    }
+    .gallery__title {
+        margin: 0;
+        padding: 48px 0 64px 12.5%;
+    }
+}
