@@ -11,9 +11,6 @@
     justify-content: space-around;
     align-items: flex-end;
     list-style: none;
-        &--active{
-            border-bottom: 3px $white solid;
-        }
         &--style {
             color: $white;
             text-decoration: none;
@@ -22,8 +19,11 @@
             width: 50%;
             font-size: 14px;
             padding-bottom: 5px;
+            border-bottom: 3px $black solid;
         }
-
+        &--active{
+            border-bottom: 3px $white solid;
+        }
         &--logo {
             margin: 14px 0 16px 0;
             display: flex;
