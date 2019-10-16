@@ -20,7 +20,7 @@ function createTable(table, shows) {
 }
 
 function createTableHead(table, shows) {
-    var tHead = table.createTableHead();
+    var tHead = table.createTHead();
     var row = tHead.insertRow();
     for (var show of shows) {
         var th = document.createElement("th");
