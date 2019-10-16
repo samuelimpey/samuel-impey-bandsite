@@ -1,3 +1,54 @@
-// .show-table, tr{
+.show-table {
+    display: flex;
+    justify-content: center;
+    // margin: 0 5%;
+    & tBody tr{
+        & button {
+        box-sizing: border-box;
+        display: block;
+        width: 90vw;  
+        height: 15vw;
+        background-color: $black;
+        border-radius: 5px;
+        color: $white;
+        padding: 0;
+        margin: 0;
+    }
+        margin: 0;
+        padding: 0;
+        display: block;
+        box-sizing: border-box;
+        & th {
+            display: block;
+            padding: inherit;
+            text-align: left;
+        }
+        & td {
+            padding: inherit;
+        }
+
+    }
+    
+}
+
+// .show-table tBody tr th{
 //     display: block;
+//     text-align: left;
+//     margin: 0;
+//     padding: 0;
+// }
+// .show-table tBody tr td {
+// display: block;
+// margin: 0;
+//     padding: 0;
+
+// }
+
+// .show-table button {
+//  display: block;
+//  width: 90vw;  
+//  height: 15vw;
+//  background-color: $black;
+//  border-radius: 5px;
+//  color: $white;
 // }

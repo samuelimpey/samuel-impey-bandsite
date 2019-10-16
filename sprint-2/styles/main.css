@@ -526,4 +526,44 @@ h5 {
     left: 89.3%;
   }
 }
+
+.show-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.show-table tBody tr {
+  margin: 0;
+  padding: 0;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.show-table tBody tr button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  width: 90vw;
+  height: 15vw;
+  background-color: #323232;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+}
+
+.show-table tBody tr th {
+  display: block;
+  padding: inherit;
+  text-align: left;
+}
+
+.show-table tBody tr td {
+  padding: inherit;
+}
 /*# sourceMappingURL=main.css.map */
