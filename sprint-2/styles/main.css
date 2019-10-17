@@ -252,7 +252,7 @@ h5 {
 }
 
 .hero {
-  min-height: 343px;
+  min-height: 263px;
   height: auto;
   position: relative;
   display: -webkit-box;
@@ -268,7 +268,8 @@ h5 {
 .hero__image {
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .hero__text {
@@ -527,6 +528,11 @@ h5 {
   }
 }
 
+.show-title {
+  font-family: AvenirMedium;
+  margin: 10% 0 5% 5%;
+}
+
 .show-table {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -534,6 +540,9 @@ h5 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: AvenirLight;
+  font-size: 12px;
+  border-spacing: 0;
 }
 
 .show-table tBody tr {
@@ -551,24 +560,75 @@ h5 {
   width: 90vw;
   height: 15vw;
   background-color: #323232;
-  border-radius: 5px;
+  border-radius: 4px;
+  border: none;
   color: #ffffff;
-  padding: 0;
   margin: 0;
+  font-family: AvenirMedium;
+  font-size: 14px;
 }
 
 .show-table tBody tr th {
   display: block;
   padding: inherit;
   text-align: left;
+  font-family: AvenirRegualr;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 24px;
 }
 
-.show-table tBody tr td {
-  padding: inherit;
+.show-table__bolded-date {
+  font-family: AvenirMedium;
+  padding-top: 16px;
+}
+
+.show-table__values {
+  padding-top: 16px;
+}
+
+.button_underline {
+  padding: 32px 0 16px 0;
+  border-bottom: 1px rgba(0, 0, 0, 0.39) solid;
 }
 
 .show-table-tablet {
   display: none;
+  width: 720px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: AvenirLight;
+  font-size: 12px;
+  border-spacing: 0;
+}
+
+.show-table-tablet button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  width: 11.11vw;
+  height: 48px;
+  background-color: #323232;
+  border-radius: 4px;
+  border: none;
+  color: #ffffff;
+  margin: 0;
+  font-family: AvenirMedium;
+  font-size: 14px;
+}
+
+.show-table-tablet tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.show-table-tablet__table--headers {
+  width: 512px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -577,6 +637,9 @@ h5 {
   }
   .show-table-tablet {
     display: table;
+  }
+  table tr td button {
+    display: inherit;
   }
 }
 /*# sourceMappingURL=main.css.map */

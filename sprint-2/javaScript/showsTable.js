@@ -19,10 +19,15 @@ function createTableMobile(table, shows) {
             cell.appendChild(text);
             if (key === "date") {
                 let element = document.querySelectorAll('td');
-                console.log(element);
                 for (i = 0; i < element.length; i++) {
                     if (i % 4 === 0) {
-                        element[i].classList.add("bolded-date");
+                        element[i].classList.add("show-table__bolded-date");
+                    }
+                    else if (i % 4 === 3) {
+                        element[i].classList.add("button_underline");
+                    }
+                    else {
+                        element[i].classList.add("show-table__values");
                     }
                 }
             }
@@ -42,7 +47,7 @@ function createTableMobile(table, shows) {
 } function createTableHeadMobile(shows, row) {
     let variable = count % 3;
     let th = document.createElement("th");
-    let text = document.createTextNode(shows[variable]);
+    let text = document.createTextNode(shows[variable].toUpperCase());
     th.appendChild(text);
     row.appendChild(th);
 }
@@ -54,45 +59,24 @@ const table = document.querySelector(".show-table");
 const tabelTablet = document.querySelector(".show-table-tablet")
 const showKeys = Object.keys(shows[0]);
 
-// function invocation
-
-// let x = window.matchMedia("(min-width: 768px)")
-// let y = window.matchMedia('(min-width: 1440px)')
-// if (x.matches) {
-//     createTableTablet(table, shows);
-//     createTableHeadTablet(table, showKeys)
-// }
-// else if (y.matches) {
-//     createTableDesktop(table, shows);
-//     createTableHeadDesktop(table, showKeys);
-// }
-// else {
-//     createTableMobile(table, shows);
-// }
-
-
-
 function createTableTablet(table, shows) {
+    createTableHeadTablet(table, shows);
     for (var show of shows) {
-
+        let row = table.insertRow();
         for (key in show) {
-
-            let row = table.insertRow();
             let cell = row.insertCell();
             let text = document.createTextNode(show[key]);
             cell.appendChild(text);
             if (key === "date") {
                 let element = document.querySelectorAll('td');
-                console.log(element);
                 for (i = 0; i < element.length; i++) {
                     if (i % 4 === 0) {
-                        element[i].classList.add("bolded-date");
+                        element[i].classList.add("show-table__bolded-date");
                     }
                 }
             }
 
             if (count % 3 === 2) {
-                let row = table.insertRow();
                 let buttoncell = row.insertCell();
                 let btn = document.createElement("BUTTON");
                 btn.innerHTML = "BUY TICKETS";
@@ -102,57 +86,15 @@ function createTableTablet(table, shows) {
 
         }
     }
-    createTableHeadMobile(table, shows);
+    let element = document.querySelector('thead tr');
+    element.classList.add("show-table-tablet__table--headers");
 }
 function createTableHeadTablet(table, shows) {
-    var tHead = table.createTHead();
-    var row = tHead.insertRow();
-    for (var show of shows) {
-        var th = document.createElement("th");
-        var text = document.createTextNode(show);
-        th.appendChild(text);
-        row.appendChild(th);
-    }
-}
-
-
-function createTableDesktop(table, shows) {
-    for (var show of shows) {
-
-        for (key in show) {
-
-            let row = table.insertRow();
-            let cell = row.insertCell();
-            let text = document.createTextNode(show[key]);
-            cell.appendChild(text);
-            if (key === "date") {
-                let element = document.querySelectorAll('td');
-                console.log(element);
-                for (i = 0; i < element.length; i++) {
-                    if (i % 4 === 0) {
-                        element[i].classList.add("bolded-date");
-                    }
-                }
-            }
-
-            if (count % 3 === 2) {
-                let row = table.insertRow();
-                let buttoncell = row.insertCell();
-                let btn = document.createElement("BUTTON");
-                btn.innerHTML = "BUY TICKETS";
-                buttoncell.appendChild(btn);
-            }
-            count++;
-
-        }
-    }
-
-} function createTableHeadDesktop(table, shows) {
-    var tHead = table.createTHead();
-    var row = tHead.insertRow();
-    for (var show of shows) {
-        var th = document.createElement("th");
-        var text = document.createTextNode(show);
+    let tHead = table.createTHead();
+    let row = tHead.insertRow();
+    for (index = 0; index < 3; index++) {
+        let th = document.createElement("th");
+        let text = document.createTextNode(showKeys[index].toUpperCase());
         th.appendChild(text);
         row.appendChild(th);
     }
@@ -160,3 +102,46 @@ function createTableDesktop(table, shows) {
 
 createTableMobile(table, shows);
 createTableTablet(tabelTablet, shows);
+
+
+// function createTableDesktop(table, shows) {
+//     for (var show of shows) {
+
+//         for (key in show) {
+
+//             let row = table.insertRow();
+//             let cell = row.insertCell();
+//             let text = document.createTextNode(show[key]);
+//             cell.appendChild(text);
+//             if (key === "date") {
+//                 let element = document.querySelectorAll('td');
+//                 console.log(element);
+//                 for (i = 0; i < element.length; i++) {
+//                     if (i % 4 === 0) {
+//                         element[i].classList.add("bolded-date");
+//                     }
+//                 }
+//             }
+
+//             if (count % 3 === 2) {
+//                 let row = table.insertRow();
+//                 let buttoncell = row.insertCell();
+//                 let btn = document.createElement("BUTTON");
+//                 btn.innerHTML = "BUY TICKETS";
+//                 buttoncell.appendChild(btn);
+//             }
+//             count++;
+
+//         }
+//     }
+
+// } function createTableHeadDesktop(table, shows) {
+//     var tHead = table.createTHead();
+//     var row = tHead.insertRow();
+//     for (var show of shows) {
+//         var th = document.createElement("th");
+//         var text = document.createTextNode(show);
+//         th.appendChild(text);
+//         row.appendChild(th);
+//     }
+// }

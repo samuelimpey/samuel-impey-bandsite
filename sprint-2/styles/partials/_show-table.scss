@@ -1,38 +1,88 @@
+.show-title {
+    font-family: AvenirMedium;
+    margin: 10% 0 5% 5%;
+}
 .show-table {
     display: flex;
     justify-content: center;
-    // margin: 0 5%;
+    font-family: AvenirLight;
+    font-size: 12px;
+    border-spacing: 0;
+    
     & tBody tr{
+        margin: 0;
+        padding: 0;
+        display: block;
+        box-sizing: border-box;
+
         & button {
-        box-sizing: border-box;
-        display: block;
-        width: 90vw;  
-        height: 15vw;
-        background-color: $black;
-        border-radius: 5px;
-        color: $white;
-        padding: 0;
-        margin: 0;
-    }
-        margin: 0;
-        padding: 0;
-        display: block;
-        box-sizing: border-box;
+            box-sizing: border-box;
+            display: block;
+            width: 90vw;  
+            height: 15vw;
+            background-color: $black;
+            border-radius: 4px;
+            border: none;
+            color: $white;
+            margin: 0;
+            font-family: AvenirMedium;
+            font-size: 14px;
+        }
+       
         & th {
             display: block;
             padding: inherit;
             text-align: left;
+            font-family: AvenirRegualr;
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.5);
+            margin-top: 24px;
         }
-        & td {
-            padding: inherit;
-        }
-
+    }   
+    &__bolded-date {
+        font-family: AvenirMedium;
+        padding-top: 16px;
     }
-    
+    &__values {
+        padding-top: 16px;
+    }
 }
+.button_underline {
+    padding: 32px 0 16px 0;
+    border-bottom: 1px rgba(0, 0, 0, 0.39) solid;
+}
+
 .show-table-tablet {
   display: none;
+  width: 720px;
+  justify-content: center;
+  font-family: AvenirLight;
+  font-size: 12px;
+  border-spacing: 0;
+  & button {
+    box-sizing: border-box;
+    display: block;
+    width: 11.11vw;  
+    height: 48px;
+    background-color: $black;
+    border-radius: 4px;
+    border: none;
+    color: $white;
+    margin: 0;
+    font-family: AvenirMedium;
+    font-size: 14px;
+        }
+
+    & tr {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__table--headers {
+        width: 512px;
+        
+    }
 }
+
 
 @include medium {
     .show-table {   
@@ -40,5 +90,9 @@
     }
     .show-table-tablet {
         display: table;
+        
+    }
+    table tr td button {
+        display: inherit;
     }
 }

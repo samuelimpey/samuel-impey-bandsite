@@ -1,5 +1,5 @@
 .hero {
-    min-height: 343px;
+    min-height: 263px;
     height: auto;
     position: relative;
     display: flex;
@@ -9,7 +9,7 @@
     &__image {
         height: 100%;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
+        object-fit: cover;
     }
     &__text {
         box-sizing: border-box;
