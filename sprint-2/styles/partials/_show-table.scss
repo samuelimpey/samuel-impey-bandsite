@@ -30,25 +30,15 @@
     }
     
 }
+.show-table-tablet {
+  display: none;
+}
 
-// .show-table tBody tr th{
-//     display: block;
-//     text-align: left;
-//     margin: 0;
-//     padding: 0;
-// }
-// .show-table tBody tr td {
-// display: block;
-// margin: 0;
-//     padding: 0;
-
-// }
-
-// .show-table button {
-//  display: block;
-//  width: 90vw;  
-//  height: 15vw;
-//  background-color: $black;
-//  border-radius: 5px;
-//  color: $white;
-// }
+@include medium {
+    .show-table {   
+        display: none;
+    }
+    .show-table-tablet {
+        display: table;
+    }
+}

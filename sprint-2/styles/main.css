@@ -566,4 +566,17 @@ h5 {
 .show-table tBody tr td {
   padding: inherit;
 }
+
+.show-table-tablet {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .show-table {
+    display: none;
+  }
+  .show-table-tablet {
+    display: table;
+  }
+}
 /*# sourceMappingURL=main.css.map */
