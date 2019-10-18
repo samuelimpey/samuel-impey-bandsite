@@ -594,7 +594,6 @@ h5 {
 
 .show-table-tablet {
   display: none;
-  width: 720px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -636,10 +635,17 @@ h5 {
     display: none;
   }
   .show-table-tablet {
-    display: table;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   table tr td button {
     display: inherit;
   }
+}
+
+#comment-section__comment {
+  width: 70vw;
+  border: 1px solid black;
 }
 /*# sourceMappingURL=main.css.map */

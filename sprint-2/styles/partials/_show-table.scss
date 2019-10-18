@@ -54,7 +54,6 @@
 
 .show-table-tablet {
   display: none;
-  width: 720px;
   justify-content: center;
   font-family: AvenirLight;
   font-size: 12px;
@@ -89,7 +88,7 @@
         display: none;
     }
     .show-table-tablet {
-        display: table;
+        display: flex;
         
     }
     table tr td button {
