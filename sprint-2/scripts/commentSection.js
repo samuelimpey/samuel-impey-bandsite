@@ -17,20 +17,45 @@ let comments = [
     }
 ];
 
+const commentSection = document.getElementsByID("comment-section")
 const commentContainer = document.getElementsByClassName("comments-container");
+// const formInput = comment - section.getelementByTagName('input["type = text"]').value;
+let count = 0;
 
-const form = document.getElementById("comment-section");
-form.addEventListener("submit", submitEvent => {
-    // prevent page refresh
-    submitEvent.preventDefault();
+function createComments() {
+    while (count < comments.length) {
+        let newCommentContainer = document.createElement("div");
+        let head = document.createElement("h3");
+        let userComment = document.createElement('p');
+        // let commentDate = document.createElement('p');
+
+        let text = document.createTextNode(comments[count].name);
+        head.appendChild(text);
+        newCommentContainer.appendChild(head);
+        let user = document.createTextNode(comments[count].comment);
+        userComment.appendChild(user);
+        newCommentContainer.appendChild(userComment);
+        commentContainer.appendChild(newCommentContainer);
+        count++;
+
+    }
+}
+
+createComments();
+
+commentSection.addEventListener("submit", (event) => {
+    event.preventDefault();
 
     let name = event.target.name.value;
     let comment = event.target.comment.value;
+    // let date = 
 
-
-
-
-
-
-
-}
+    function addCommentToArray(name, comment) {
+        let x = new Object();
+        x.name = name;
+        x.comment = comment;
+        comments.push(x);
+    }
+    addCommentToArray(name, comment);
+    createComments();
+});
