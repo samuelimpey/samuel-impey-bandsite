@@ -58,6 +58,12 @@
   font-family: AvenirLight;
   font-size: 12px;
   border-spacing: 0;
+  width: 93.75%;
+  max-width: 804px;
+  margin-left: 3.125%;
+  & thead {
+    width: 100%;
+  }
   & button {
     box-sizing: border-box;
     display: block;
@@ -80,18 +86,40 @@
         width: 512px;
         
     }
+    & tr button {
+        width: 160px;
+        height: 48px;
+    }
+    & td {
+        padding-top: 5px;
+    }
 }
 
 
 @include medium {
+    &__bolded-date {
+        font-family: AvenirMedium;
+        padding-top: 0;
+    }
     .show-table {   
         display: none;
     }
     .show-table-tablet {
-        display: flex;
-        
+        display: flex;      
+    }
+    table tr {
+        border-bottom: 1px solid $silver;
     }
     table tr td button {
         display: inherit;
+    }
+    .show-table-tablet__table--headers {
+        border-bottom: none;
+        display: flex;
+    }
+}
+@include huge {
+    #show-table-tablet {
+        margin-top: 10px;
     }
 }

@@ -20,6 +20,7 @@ function createTableMobile(table, shows) {
             if (key === "date") {
                 let element = document.querySelectorAll('td');
                 for (i = 0; i < element.length; i++) {
+                    console.log(element.length);
                     if (i % 4 === 0) {
                         element[i].classList.add("show-table__bolded-date");
                     }
