@@ -118,7 +118,7 @@
         display: flex;
     }
 }
-@include huge {
+@include huge { // javascript is broken and wont apply styling i reget using stupid tables 
     #show-table-tablet {
         margin-top: 10px;
     }

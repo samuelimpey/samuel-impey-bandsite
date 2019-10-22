@@ -24,6 +24,8 @@ const commentContainer = document.getElementById("comments");
 // const formInput = comment - section.getelementByTagName('input["type = text"]').value;
 let count = 0;
 
+
+
 function createComments() {
     while (count < comments.length) {
         let newCommentContainer = document.createElement("div");
