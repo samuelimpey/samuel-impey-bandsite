@@ -100,8 +100,8 @@
 //         row.appendChild(th);
 //     }
 // }
-const URL = "https://project-1-api.herokuapp.com/showdates?api_key=87faba9c-9fa7-401e-a848-aa1ee90a7980";
-const showTable = document.getElementsByClassName("show-table");
+const URL = "https://project-1-api.herokuapp.com/showdates?api_key=330199d8-d0d3-43bf-9209-b837266d8e98";
+const showTable = document.querySelector(".show-table");
 
 axios.get(URL).then((response) => {
     // console.log(response.data)
@@ -111,9 +111,9 @@ axios.get(URL).then((response) => {
 function createTable(table) {
     console.log(table);
     console.log(table[0].date);
-    for (i = 0; i < table.lenght; i++) {
-
-        let newShowDiv = document.createElement('div');
+    for (i = 0; i < table.length; i++) {
+        console.log("inside for loop");
+        let newShowDiv = document.createElement("div");
         newShowDiv.className = "show-table__container";
         let showDate = document.createElement('h4');
         showDate.className = "show-table__container--date";
@@ -133,7 +133,7 @@ function createTable(table) {
         let location = document.createTextNode(table[i].location);
         showLocation.appendChild(location);
         newShowDiv.appendChild(showLocation);
-        // newShowDiv.appendChild(button);
+        newShowDiv.appendChild(button);
         showTable.appendChild(newShowDiv);
 
     }

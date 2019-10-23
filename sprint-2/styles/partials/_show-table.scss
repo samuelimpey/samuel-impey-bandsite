@@ -3,19 +3,16 @@
     margin: 10% 0 5% 5%;
 }
 .show-table {
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
     font-family: AvenirLight;
     font-size: 12px;
     border-spacing: 0;
     
-    & tBody tr{
-        margin: 0;
-        padding: 0;
-        display: block;
-        box-sizing: border-box;
-
-        & button {
+    &__container {
+        width: 320px;
+        &--button {
             box-sizing: border-box;
             display: block;
             width: 90vw;  
@@ -28,6 +25,14 @@
             font-family: AvenirMedium;
             font-size: 14px;
         }
+    }
+    & tBody tr{
+        margin: 0;
+        padding: 0;
+        display: block;
+        box-sizing: border-box;
+
+        
        
         & th {
             display: block;
@@ -101,12 +106,8 @@
         font-family: AvenirMedium;
         padding-top: 0;
     }
-    .show-table {   
-        display: none;
-    }
-    .show-table-tablet {
-        display: flex;      
-    }
+       
+    
     table tr {
         border-bottom: 1px solid $silver;
     }
