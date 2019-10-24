@@ -108,11 +108,16 @@ axios.get(URL).then((response) => {
     createTable(response.data)
 });
 
+
+
 function createTable(table) {
-    console.log(table);
-    console.log(table[0].date);
+    // const keys = Object.keys(table[0]);
+    // console.log(table);
+    // console.log(table[0].date);
     for (i = 0; i < table.length; i++) {
         console.log("inside for loop");
+        let dateHead = document.createElement('h4');
+        dateHead.className = "show-table__headers";
         let newShowDiv = document.createElement("div");
         newShowDiv.className = "show-table__container";
         let showDate = document.createElement('h4');
@@ -124,12 +129,36 @@ function createTable(table) {
         let button = document.createElement('button');
         button.className = "show-table__container--button";
 
+        let headDate = document.createElement('h5');
+        headDate.className = "show-table__headers";
+        headDate.innerHTML = "DATE";
+
+        let headVenue = document.createElement('h5');
+        headVenue.className = "show-table__headers";
+        headVenue.innerHTML = "VENUE";
+
+        let headLocation = document.createElement('h5');
+        headLocation.className = "show-table__headers";
+        headLocation.innerHTML = "LOCATION";
+
+
+
+        // let headDate = document.createTextNode(keys[1]);
+        // console.log(table.keys(table[0]));
+        // dateHead.appendChild(headDate);
+        // newShowDiv.appendChild(dateHead);
+        newShowDiv.appendChild(headDate);
         let date = document.createTextNode(table[i].date);
         showDate.appendChild(date);
         newShowDiv.appendChild(showDate);
+
+
+        // let headVenue = document.createElement('h4');
+        newShowDiv.appendChild(headVenue);
         let venue = document.createTextNode(table[i].place);
         showVenue.appendChild(venue);
         newShowDiv.appendChild(showVenue);
+        newShowDiv.appendChild(headLocation);
         let location = document.createTextNode(table[i].location);
         showLocation.appendChild(location);
         newShowDiv.appendChild(showLocation);

@@ -24,7 +24,7 @@ const commentContainer = document.getElementById("comments");
 let count = 3;
 // const formInput = comment - section.getelementByTagName('input["type = text"]').value;
 function getComments() {
-    axios.get("https://project-1-api.herokuapp.com/comments?api_key=d0a2b0f4-6fa3-443d-a5fe-0bc73f39c1bd")
+    axios.get("https://project-1-api.herokuapp.com/comments?api_key=4ca5e4fe-ddf2-4c8f-8b8e-8d2b3b171922")
         .then((response) => {
             createComments(response.data);
         });
@@ -36,7 +36,7 @@ function createComments(comments) {
     let commentMainContainer = document.createElement("div");
     commentMainContainer.setAttribute("id", "main-container");
     commentContainer.appendChild(commentMainContainer);
-    for (let i = 0; i < comments.length; i++) {
+    for (let i = comments.length - 1; i >= 0; i--) {
         let newCommentContainer = document.createElement("div");
         newCommentContainer.className = "new-comment";
         let head = document.createElement("h4");
@@ -80,14 +80,14 @@ commentSection.addEventListener("submit", (event) => {
         comment: comment,
     }
 
-    axios.post("https://project-1-api.herokuapp.com/comments?api_key=d0a2b0f4-6fa3-443d-a5fe-0bc73f39c1bd", object).then((response) => {
+    axios.post("https://project-1-api.herokuapp.com/comments?api_key=4ca5e4fe-ddf2-4c8f-8b8e-8d2b3b171922", object).then((response) => {
         remove();
         console.log(response.data)
     });
 
     // console.log(response);
     // addCommentToArray(name, comment);
-    setTimeout(function () { getComments(); }, 1000);
+    setTimeout(function () { getComments(); }, 125);
     commentSection.reset();
     count++;
 });
