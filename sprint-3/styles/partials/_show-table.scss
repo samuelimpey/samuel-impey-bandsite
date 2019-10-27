@@ -1,0 +1,126 @@
+.show-title {
+    font-family: AvenirMedium;
+    margin: 10% 0 5% 5%;
+}
+.show-table {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    font-family: AvenirLight;
+    font-size: 12px;
+    border-spacing: 0;
+    
+    &__container {
+        width: 320px;
+        &--button {
+            box-sizing: border-box;
+            display: block;
+            width: 90vw;  
+            height: 15vw;
+            background-color: $black;
+            border-radius: 4px;
+            border: none;
+            color: $white;
+            margin: 0;
+            font-family: AvenirMedium;
+            font-size: 14px;
+        }
+    }
+    & tBody tr{
+        margin: 0;
+        padding: 0;
+        display: block;
+        box-sizing: border-box;
+
+        
+       
+        & th {
+            display: block;
+            padding: inherit;
+            text-align: left;
+            font-family: AvenirRegualr;
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.5);
+            margin-top: 24px;
+        }
+    }   
+    &__bolded-date {
+        font-family: AvenirMedium;
+        padding-top: 16px;
+    }
+    &__values {
+        padding-top: 16px;
+    }
+}
+.button_underline {
+    padding: 32px 0 16px 0;
+    border-bottom: 1px rgba(0, 0, 0, 0.39) solid;
+}
+
+.show-table-tablet {
+  display: none;
+  justify-content: center;
+  font-family: AvenirLight;
+  font-size: 12px;
+  border-spacing: 0;
+  width: 93.75%;
+  max-width: 804px;
+  margin-left: 3.125%;
+  & thead {
+    width: 100%;
+  }
+  & button {
+    box-sizing: border-box;
+    display: block;
+    width: 11.11vw;  
+    height: 48px;
+    background-color: $black;
+    border-radius: 4px;
+    border: none;
+    color: $white;
+    margin: 0;
+    font-family: AvenirMedium;
+    font-size: 14px;
+        }
+
+    & tr {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__table--headers {
+        width: 512px;
+        
+    }
+    & tr button {
+        width: 160px;
+        height: 48px;
+    }
+    & td {
+        padding-top: 5px;
+    }
+}
+
+
+@include medium {
+    &__bolded-date {
+        font-family: AvenirMedium;
+        padding-top: 0;
+    }
+       
+    
+    table tr {
+        border-bottom: 1px solid $silver;
+    }
+    table tr td button {
+        display: inherit;
+    }
+    .show-table-tablet__table--headers {
+        border-bottom: none;
+        display: flex;
+    }
+}
+@include huge { // javascript is broken and wont apply styling i reget using stupid tables 
+    #show-table-tablet {
+        margin-top: 10px;
+    }
+}

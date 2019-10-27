@@ -1,0 +1,56 @@
+.about {
+    font-family: AvenirSemi;
+    margin-left: 5%;
+    margin-right: 5%;
+    &__title {
+        font-family: AvenirBold;
+        margin-top: 32px;
+    }
+    &__img {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 24px 0; 
+    }
+    &__quote {
+        margin: 24px 0 32px 0;
+    }
+    &__name {
+        margin-bottom: 40px;
+    }
+    &__sub-title {
+        margin-bottom: 24px;
+    }
+    &__info {
+        font-family: AvenirLight;
+        margin-bottom: 40px;
+    }
+}
+
+@include medium {
+    .about__info--sbs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .about__info {
+        width: 48.33%;
+    }
+    .about{
+        margin-left: 3.125%;
+        margin-right: 3.125%;
+    }
+    .about__img {
+        margin: 0;
+        height: 47.1vw;
+        object-fit: cover;
+     }
+}
+
+@include huge {
+    .about {
+        margin: 0 18.889%;
+    }
+    .about__img {
+        height: 31.25vw;
+    }
+}

@@ -20,7 +20,7 @@
 
 /* desktop media query high pixel dpi */
 @mixin huge {
-    @media only screen and (min-width:1200px) {
+    @media only screen and (min-width:1440px) {
         @content;
     }
 }

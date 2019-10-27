@@ -1,0 +1,71 @@
+#comment-section {
+    margin: 0 5%;
+    font-family: AvenirRegualr;
+}
+label {
+    display: block;
+    margin: 5px 0;
+    width: 80%;
+    opacity: .4;
+    position: relative;
+    left: 20vw;
+}
+
+input, textarea {
+    border: 1px solid $mercury;
+    border-radius: 4px;
+    width: 75%;
+    height: 45px;
+    position: relative;
+    left: 20vw;
+    background-color: $alabaster;
+}
+ *:focus {
+        outline-color: rgba(255, 255, 255, 0);
+        border: 1px solid $black;
+    }
+.comment-input-section {
+    
+}
+.comment-section__button {
+    margin: 20px 0 0 20vw;
+    width: 75%;
+    height: 34px;
+    background-color: $black;
+    color: $white;
+    border-radius: 4px;
+    font-family: AvenirMedium;
+}
+.new-comment--avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 24px;
+}
+.new-comment--date {
+    opacity: .4;
+    margin-top: 40px;
+    float: right;
+}
+.new-comment--name {
+    display: inline-block;
+    margin: 40px 0 16px 12px;
+    font-family: avenirBold;
+}
+.new-comment--comment {
+    margin-bottom: 0;
+	margin: 0 0 0 35px;
+	width: 85%;
+	padding-bottom: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+    font-size: 13px;
+}
+
+#avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    // margin-top: 24px;
+    position: relative;
+    top: 78px;
+}

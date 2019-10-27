@@ -1,0 +1,70 @@
+.shows-hero {
+    height: 472px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    &__album {
+        box-sizing: border-box;
+        width: 70%;
+        top: 25%;
+        position: absolute;
+        font-family: AvenirBold;
+        color: $white;
+        bottom: 120px;
+        left: 5%;
+    }
+    &__image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    &__text {
+        box-sizing: border-box;
+        width: 70%;
+        top: 50%;
+        position: absolute;
+        font-family: AvenirBold;
+        color: $white;
+        bottom: 120px;
+        left: 5%;
+    }
+}
+.player {
+    position: relative;
+    width: 90vw;
+    height: 80px;
+    bottom: 110px;
+    left: 5%;
+}
+
+@include medium {
+    .shows-hero__album {
+        top: 19%;
+    }
+    .shows-hero {
+        height: 670px;
+        // min-height: 480px;
+    }
+    .shows-hero__text {
+        font-size: 60px;
+        line-height: 68px;
+        bottom: 120px;
+        top: 30%;
+    }
+    .player {
+        width: 436px;
+        height: 146px;
+        bottom: 204px;
+    }
+}
+@include huge {
+    .hero {
+        height: 46.52vw;
+        min-height: 750px;
+    }
+    .player {
+        bottom: 200px;
+        left: 50%;
+    }
+}

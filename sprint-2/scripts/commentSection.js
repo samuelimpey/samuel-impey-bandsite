@@ -16,15 +16,15 @@
 //         comment:
 //             "How can someone be soo good!!! You can tell he lives for this and loves to do it everyday.Every time I see him I get instantly happy! He’s definitely my favorite ever",
 //         date: "11/15/2018"
-//     }
-// ];
+//     } old key 4ca5e4fe-ddf2-4c8f-8b8e-8d2b3b171922
+// ];  new key 9b6f169a-3639-47f9-b95b-939ba1bb009f
 
 const commentSection = document.getElementById("comment-section");
 const commentContainer = document.getElementById("comments");
 let count = 3;
 // const formInput = comment - section.getelementByTagName('input["type = text"]').value;
 function getComments() {
-    axios.get("https://project-1-api.herokuapp.com/comments?api_key=4ca5e4fe-ddf2-4c8f-8b8e-8d2b3b171922")
+    axios.get("https://project-1-api.herokuapp.com/comments?api_key=9b6f169a-3639-47f9-b95b-939ba1bb009f")
         .then((response) => {
             createComments(response.data);
         });
@@ -53,9 +53,13 @@ function createComments(comments) {
         let text = document.createTextNode(comments[i].name);
         head.appendChild(text);
         newCommentContainer.appendChild(head);
-        let day = comments[i].timestamp;
-        let time = new Date();
-        day = time.getMonth() + 1 + "/" + time.getDate() + "/" + time.getFullYear();
+
+        let day = (comments[i].timestamp);
+        today = new Date();
+        day = Math.ceil((today.getTime() - day) / (1000 * 60 * 60 * 24) - 1);
+        console.log(day);
+
+        // day = time.getMonth() + 1 + "/" + time.getDate() + "/" + time.getFullYear();
         day = document.createTextNode(day);
         date.appendChild(day);
         newCommentContainer.appendChild(date);
@@ -80,7 +84,7 @@ commentSection.addEventListener("submit", (event) => {
         comment: comment,
     }
 
-    axios.post("https://project-1-api.herokuapp.com/comments?api_key=4ca5e4fe-ddf2-4c8f-8b8e-8d2b3b171922", object).then((response) => {
+    axios.post("https://project-1-api.herokuapp.com/comments?api_key=9b6f169a-3639-47f9-b95b-939ba1bb009f", object).then((response) => {
         remove();
         console.log(response.data)
     });
