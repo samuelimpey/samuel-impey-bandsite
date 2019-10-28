@@ -1,126 +1,102 @@
 .show-title {
     font-family: AvenirMedium;
-    margin: 10% 0 5% 5%;
+    margin: 32px 0 40px 5%;
 }
 .show-table {
+    margin: 0 5%;
     // display: flex;
     // flex-direction: column;
     // justify-content: center;
     font-family: AvenirLight;
     font-size: 12px;
-    border-spacing: 0;
+    // border-spacing: 0;
+    
     
     &__container {
-        width: 320px;
+        width: 100%;
+        border-bottom: 1px solid $silver;
+        margin-bottom: 16px;
+        &--date {
+            font-family: AvenirMedium;
+            margin: 16px 0 24px 0;
+        }
+        &--venue {
+            margin: 16px 0 24px 0;
+        }
+        &--location {
+            margin: 16px 0 32px 0;
+        }
         &--button {
             box-sizing: border-box;
             display: block;
-            width: 90vw;  
-            height: 15vw;
+            width: 100%;  
+            height: 48px;
             background-color: $black;
             border-radius: 4px;
             border: none;
             color: $white;
-            margin: 0;
+            margin: 0 0 16px 0;
             font-family: AvenirMedium;
             font-size: 14px;
         }
     }
-    & tBody tr{
+    &__headers {
         margin: 0;
-        padding: 0;
+        color: $silver;
+        font-family: AvenirRegualr;
+    }
+}
+.table-headers {
+    display: none;
+}
+
+@include medium {
+    .show-table {
         display: block;
-        box-sizing: border-box;
-
-        
-       
-        & th {
-            display: block;
-            padding: inherit;
-            text-align: left;
-            font-family: AvenirRegualr;
-            font-size: 12px;
-            color: rgba(0, 0, 0, 0.5);
-            margin-top: 24px;
-        }
-    }   
-    &__bolded-date {
-        font-family: AvenirMedium;
-        padding-top: 16px;
+        width: 720px;
+        margin: 0 auto;
     }
-    &__values {
-        padding-top: 16px;
-    }
-}
-.button_underline {
-    padding: 32px 0 16px 0;
-    border-bottom: 1px rgba(0, 0, 0, 0.39) solid;
-}
-
-.show-table-tablet {
-  display: none;
-  justify-content: center;
-  font-family: AvenirLight;
-  font-size: 12px;
-  border-spacing: 0;
-  width: 93.75%;
-  max-width: 804px;
-  margin-left: 3.125%;
-  & thead {
-    width: 100%;
-  }
-  & button {
-    box-sizing: border-box;
-    display: block;
-    width: 11.11vw;  
-    height: 48px;
-    background-color: $black;
-    border-radius: 4px;
-    border: none;
-    color: $white;
-    margin: 0;
-    font-family: AvenirMedium;
-    font-size: 14px;
-        }
-
-    & tr {
+    .show-table__container {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
-    &__table--headers {
-        width: 512px;
-        
+    .show-table__headers {
+        display: none;
     }
-    & tr button {
+    .show-table__container--button {
         width: 160px;
         height: 48px;
     }
-    & td {
-        padding-top: 5px;
+    .show-table__container--date {
+        width: 160px;
     }
-}
-
-
-@include medium {
-    &__bolded-date {
-        font-family: AvenirMedium;
-        padding-top: 0;
+    .show-table__container--venue {
+        width: 160px;
     }
-       
-    
-    table tr {
-        border-bottom: 1px solid $silver;
+    .show-table__container--location {
+        width: 160px;
     }
-    table tr td button {
-        display: inherit;
-    }
-    .show-table-tablet__table--headers {
-        border-bottom: none;
+    .table-headers {
         display: flex;
+        // margin-left: 6.125%;
+        width: 534px;
+        justify-content: space-between;
+        h5 {
+        color: $silver;
+        font-family: AvenirRegualr;
+        width: 160px;
+        }
     }
 }
-@include huge { // javascript is broken and wont apply styling i reget using stupid tables 
-    #show-table-tablet {
-        margin-top: 10px;
+
+@include huge {
+    .show-title {
+        display: block;
+        margin: 48px 0 0 12.5%;
+    }
+    .show-table {
+    width: 804px;
+    margin: -40px 12.5% 0 auto;
     }
 }

@@ -1,102 +1,126 @@
 .show-title {
     font-family: AvenirMedium;
-    margin: 32px 0 40px 5%;
+    margin: 10% 0 5% 5%;
 }
 .show-table {
-    margin: 0 5%;
     // display: flex;
     // flex-direction: column;
     // justify-content: center;
     font-family: AvenirLight;
     font-size: 12px;
-    // border-spacing: 0;
-    
+    border-spacing: 0;
     
     &__container {
-        width: 100%;
-        border-bottom: 1px solid $silver;
-        margin-bottom: 16px;
-        &--date {
-            font-family: AvenirMedium;
-            margin: 16px 0 24px 0;
-        }
-        &--venue {
-            margin: 16px 0 24px 0;
-        }
-        &--location {
-            margin: 16px 0 32px 0;
-        }
+        width: 320px;
         &--button {
             box-sizing: border-box;
             display: block;
-            width: 100%;  
-            height: 48px;
+            width: 90vw;  
+            height: 15vw;
             background-color: $black;
             border-radius: 4px;
             border: none;
             color: $white;
-            margin: 0 0 16px 0;
+            margin: 0;
             font-family: AvenirMedium;
             font-size: 14px;
         }
     }
-    &__headers {
+    & tBody tr{
         margin: 0;
-        color: $silver;
-        font-family: AvenirRegualr;
+        padding: 0;
+        display: block;
+        box-sizing: border-box;
+
+        
+       
+        & th {
+            display: block;
+            padding: inherit;
+            text-align: left;
+            font-family: AvenirRegualr;
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.5);
+            margin-top: 24px;
+        }
+    }   
+    &__bolded-date {
+        font-family: AvenirMedium;
+        padding-top: 16px;
+    }
+    &__values {
+        padding-top: 16px;
     }
 }
-.table-headers {
-    display: none;
+.button_underline {
+    padding: 32px 0 16px 0;
+    border-bottom: 1px rgba(0, 0, 0, 0.39) solid;
 }
 
-@include medium {
-    .show-table {
-        display: block;
-        width: 720px;
-        margin: 0 auto;
-    }
-    .show-table__container {
+.show-table-tablet {
+  display: none;
+  justify-content: center;
+  font-family: AvenirLight;
+  font-size: 12px;
+  border-spacing: 0;
+  width: 93.75%;
+  max-width: 804px;
+  margin-left: 3.125%;
+  & thead {
+    width: 100%;
+  }
+  & button {
+    box-sizing: border-box;
+    display: block;
+    width: 11.11vw;  
+    height: 48px;
+    background-color: $black;
+    border-radius: 4px;
+    border: none;
+    color: $white;
+    margin: 0;
+    font-family: AvenirMedium;
+    font-size: 14px;
+        }
+
+    & tr {
         display: flex;
         justify-content: space-between;
-        align-items: center;
     }
-    .show-table__headers {
-        display: none;
+    &__table--headers {
+        width: 512px;
+        
     }
-    .show-table__container--button {
+    & tr button {
         width: 160px;
         height: 48px;
     }
-    .show-table__container--date {
-        width: 160px;
-    }
-    .show-table__container--venue {
-        width: 160px;
-    }
-    .show-table__container--location {
-        width: 160px;
-    }
-    .table-headers {
-        display: flex;
-        // margin-left: 6.125%;
-        width: 534px;
-        justify-content: space-between;
-        h5 {
-        color: $silver;
-        font-family: AvenirRegualr;
-        width: 160px;
-        }
+    & td {
+        padding-top: 5px;
     }
 }
 
-@include huge {
-    .show-title {
-        display: block;
-        margin: 48px 0 0 12.5%;
+
+@include medium {
+    &__bolded-date {
+        font-family: AvenirMedium;
+        padding-top: 0;
     }
-    .show-table {
-    width: 804px;
-    margin: -40px 12.5% 0 auto;
+       
+    
+    table tr {
+        border-bottom: 1px solid $silver;
+    }
+    table tr td button {
+        display: inherit;
+    }
+    .show-table-tablet__table--headers {
+        border-bottom: none;
+        display: flex;
+    }
+}
+@include huge { // javascript is broken and wont apply styling i reget using stupid tables 
+    #show-table-tablet {
+        margin-top: 10px;
     }
 }

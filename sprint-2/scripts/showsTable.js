@@ -128,8 +128,6 @@ function createTable(table) {
         showLocation.className = "show-table__container--location";
         let button = document.createElement('button');
         button.className = "show-table__container--button";
-        button.innerText = "BUY TICKETS";
-
 
         let headDate = document.createElement('h5');
         headDate.className = "show-table__headers";
